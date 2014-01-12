@@ -9,7 +9,7 @@ Be smart and don't use in production :)
 
 ## Configuration
 
-There is only one configuration option at the moment, and that is `log_partials`.
+The most important configuration options is `log_partials`.
 This takes a block that should return true or false, which will be executed to determine whether or not to log partials.
 
 ```ruby
@@ -20,6 +20,13 @@ PartialLogging.config do |config|
   config.log_partials do
     Rails.env.development?
   end
+
+  # Other config options:
+
+  # absolute_path: whether to show the full file system path or just
+  # `(app_root)/app/views/partials/_party.html.erb`
+  # Default: false
+  # config.absolute_path true
 end
 ```
 
