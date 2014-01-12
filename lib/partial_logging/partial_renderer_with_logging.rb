@@ -9,12 +9,20 @@ class PartialLogging::PartialRendererWithLogging < ActionView::PartialRenderer
     if @lookup_context.rendered_format == :html
       output_buffer = ActionView::OutputBuffer.new
       output_buffer.safe_concat """
-      <!-- START #{identifier} -->
+      <!-- START #{formatted_partial_identifier(identifier)} -->
         #{content}
-      <!-- END #{identifier} -->
+      <!-- END #{formatted_partial_identifier(identifier)} -->
       """
       content = output_buffer
     end
     content
+  end
+
+  def formatted_partial_identifier(identifier)
+    if PartialLogging.config.absolute_path?
+      identifier
+    else
+      identifier.sub(/#{Rails.root.to_s}/, '(app root)')
+    end
   end
 end
