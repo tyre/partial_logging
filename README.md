@@ -2,6 +2,11 @@
 
 For figuring out where the heck this HTML is coming from.
 
+This has been used successfully in Rails 3.2 and 4.1 applications, but as it relies on
+the internal state of Rails may break at any time.
+
+Be smart and don't use in production :)
+
 ## Configuration
 
 There is only one configuration option at the moment, and that is `log_partials`.
