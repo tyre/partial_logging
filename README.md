@@ -7,6 +7,12 @@ the internal state of Rails may break at any time.
 
 Be smart and don't use in production :)
 
+## Installation
+
+```ruby
+gem 'partial_logging'
+```
+
 ## Configuration
 
 The most important configuration options is `log_partials`.
