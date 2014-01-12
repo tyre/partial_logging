@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'partial_logging/version'
 
 Gem::Specification.new do |spec|
-  spec.add_runtime_dependency 'actionview', '~> 3.0', '>= 3.0.0'
+  spec.add_runtime_dependency 'actionview', '>= 3.0.0'
   spec.authors     = ['Chris Maddox']
   spec.date        = '2014-01-12'
   spec.description = 'HTML comments for Rails partial rendering.'
