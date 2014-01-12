@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.date        = '2014-01-12'
   spec.description = 'HTML comments for Rails partial rendering.'
   spec.email       = 'tyre77@gmail.com'
-  spec.files       = %w(LICENSE.md partial_logging.gemspec)
+  spec.files       = %w(README.md LICENSE.md partial_logging.gemspec)
   spec.files      += Dir.glob('lib/**/*.rb')
   spec.files      += Dir.glob('spec/**/*')
   spec.homepage    = 'http://rubygems.org/gems/partial_logging'
